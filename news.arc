@@ -1,6 +1,6 @@
 ; News.  2 Sep 06.
 
-; to run news: (nsv), then go to http://localhost:8080
+; to run news: (nsv), then go to http://localhost:8888
 ; put usernames of admins, separated by whitespace, in arc/admins
 
 ; bug: somehow (+ votedir* nil) is getting evaluated.
@@ -79,7 +79,7 @@
 
 (= initload-users* nil)
 
-(def nsv ((o port 8080))
+(def nsv ((o port 8888))
   (map ensure-dir (list arcdir* newsdir* storydir* votedir* profdir*))
   (unless stories* (load-items))
   (if (and initload-users* (empty profs*)) (load-users))

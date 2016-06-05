@@ -6,7 +6,7 @@
 
 (= quitsrv* nil breaksrv* nil) 
 
-(def serve ((o port 8080))
+(def serve ((o port 8888))
   (wipe quitsrv*)
   (ensure-srvdirs)
   (map [apply new-bgthread _] pending-bgthreads*)
@@ -19,7 +19,7 @@
       (handle-request s breaksrv*)))
   (prn "quit server"))
 
-(def serve1 ((o port 8080))
+(def serve1 ((o port 8888))
   (w/socket s port (handle-request s t)))
 
 (def ensure-srvdirs ()
