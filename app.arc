@@ -11,7 +11,7 @@
    adminfile* "arc/admins"
    cookfile*  "arc/cooks")
 
-(def asv ((o port 8080))
+(def asv ((o port 8888))
   (load-userinfo)
   (serve port))
 
